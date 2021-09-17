@@ -8,15 +8,13 @@ class Marker {
 write(inputstring) {
  
 let nowhitespacestring = inputstring.replace(/\s/g,'')
- let stringarray = nowhitespacestring.split('')
- const characternumber = stringarray.length 
- this.remainingInk = this.remainingInk - characternumber
+ const characternumber = nowhitespacestring.length 
+ this.remainingInk -= characternumber
 
  if (this.remainingInk >= characternumber){
    return inputstring
- }else if (this.remainingInk < characternumber) {
-
-  return inputstring.slice(-(inputstring.length - this.remainingInk))
+ }else if (this.remainingInk < characternumber) { 
+   return inputstring.slice(0, this.remainingInk)
 
  }
      
