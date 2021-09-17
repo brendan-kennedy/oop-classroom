@@ -12,6 +12,14 @@ study(){
 }
 return this
 }
+doHomework(object){ 
+ if ( object.skillLevel > this.skillLevel){
+    return object.complete = false 
+}else{ 
+    return  object.complete = true  
+}
+
+}
 
 }
 
